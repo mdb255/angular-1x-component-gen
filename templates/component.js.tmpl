@@ -1,0 +1,20 @@
+/**
+ ** To use in a higher level component:
+ ** require('{{config.path}}/{{cmpName}}/{{cmpName}}.js');
+ **/
+
+require('./_{{cmpNameCamel}}.scss');
+
+angular.module('{{config.namespace}}.{{cmpNameCamel}}', [
+])
+
+.component('{{cmpNameCamel}}', {
+    bindings: {
+    },
+    template: require('./{{cmpName}}.component.html'),
+    controller: {{cmpNameCapital}}Ctrl,
+});
+
+function {{cmpNameCapital}}Ctrl() {
+    var self = this;
+}

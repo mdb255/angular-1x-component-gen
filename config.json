@@ -1,0 +1,6 @@
+{
+  "namespace": "myProj",
+  "path": "app/components",
+  "htmlTemplate": "<div></div>",
+  "scssTemplate": "@import '../../base.scss';"
+}
