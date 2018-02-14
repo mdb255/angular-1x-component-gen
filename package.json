@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx rimraf dist/ && npx babel ./ --out-dir dist/ --ignore ./node_modules --copy-files",
-    "preinstall": "npm run build",
+    "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules --copy-files",
     "postinstall": "node dist/hooks/post-install.js"
   },
   "bin": {
