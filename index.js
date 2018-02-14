@@ -47,7 +47,7 @@ function runGenerate(cmpName) {
   console.log();
 
   if (!fs.existsSync(cmpName)) {
-    fs.mkdirSync(cmpName, 755);
+    fs.mkdirSync(cmpName, "755");
   }
 
   buildJsOutput();
