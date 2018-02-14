@@ -5,10 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "node hooks/post-install.js"
+    "build": "npx rimraf dist/ && npx babel ./ --out-dir dist/ --ignore ./node_modules --copy-files",
+    "preinstall": "npm run build",
+    "postinstall": "node dist/hooks/post-install.js"
   },
   "bin": {
-    "ng-1x-cmp-gen": "./index.js"
+    "ng-1x-cmp-gen": "dist/index.js"
   },
   "repository": {
     "type": "git",
@@ -24,5 +26,10 @@
     "lodash.camelcase": "^4.3.0",
     "lodash.upperfirst": "^4.3.1",
     "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "rimraf": "^2.6.2"
   }
 }
