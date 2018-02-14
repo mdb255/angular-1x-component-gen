@@ -4,6 +4,7 @@ const SETTINGS_FILENAME = "settings.json";
 
 const camelCase = require('lodash.camelcase');
 const upperFirst = require('lodash.upperfirst');
+const values = require('lodash.values');
 const Handlebars = require('handlebars');
 const fs = require('file-system');
 const os = require('os');
@@ -55,7 +56,7 @@ function runGenerate(cmpName) {
   buildHtmlOutput();
 
   console.log('Wrote:');
-  Object.values(fileNames).forEach(function(fileName) {
+  values(fileNames).forEach(function(fileName) {
     console.log(fileName);
   });
 
