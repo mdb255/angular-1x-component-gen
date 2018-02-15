@@ -40,7 +40,7 @@ function runGenerate(cmpName) {
 
   const fileNames = {
     js: `${cmpName}/${cmpName}.js`,
-    scss: `${cmpName}/${cmpName}.scss`,
+    scss: `${cmpName}/_${cmpName}.scss`,
     html: `${cmpName}/${cmpName}.component.html`,
   };
 
